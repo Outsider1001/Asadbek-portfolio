@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Asadbek Toxirov - Personal Portfolio. Student, Developer, and AI Enthusiast based in Tashkent, Uzbekistan. View my projects and skills in this retro terminal interface.">
+    <meta name="keywords"
+        content="Asadbek Toxirov, Portfolio, Web Developer, Tashkent, Uzbekistan, AI, Student, Retro Terminal, 90s Style">
+    <meta name="author" content="Asadbek Toxirov">
+    <title>ASADBEK@SYSTEM:~$ PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Preload font for better performance -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap">
+</head>
+
+<body>
+    <div class="crt-overlay"></div>
+    <div class="scanline"></div>
+    <div class="retro-grid"></div>
+
+    <div class="theme-switcher">
+        <div id="mute-btn" class="theme-btn"
+            style="border-radius:0; width:auto; padding:0 5px; color:var(--terminal-green); font-size:0.8rem; line-height:18px; text-align:center; background:transparent; border:1px solid var(--terminal-green-dim);"
+            title="Toggle Sound">
+            [MUTE]
+        </div>
+        <div class="theme-btn" data-theme="default" title="Matrix Green"></div>
+        <div class="theme-btn" data-theme="amber" title="Retro Amber"></div>
+        <div class="theme-btn" data-theme="cyber" title="Cyberpunk Neon"></div>
+    </div>
+
+    <div class="terminal">
+        <div class="header">
+            <span>ASADBEK@SYSTEM:~$</span> <span id="typing-header"></span><span class="cursor">_</span>
+        </div>
+
+        <div id="output" class="output-area"></div>
+
+        <div class="input-line hidden" id="menu-options">
+            <p class="system-msg">ACCESS GRANTED. WELCOME, GUEST.</p>
+            <p>AVAILABLE COMMANDS:</p>
+            <nav>
+                <ul>
+                    <li><span class="cmd-prefix">[1]</span> <a href="#"
+                            onclick="showSection('about', event)">/ABOUT_ME.TXT</a></li>
+                    <li><span class="cmd-prefix">[2]</span> <a href="#"
+                            onclick="showSection('skills', event)">/SKILLS_LIST.EXE</a></li>
+                    <li><span class="cmd-prefix">[3]</span> <a href="#"
+                            onclick="showSection('education', event)">/EDUCATION_LOG.DAT</a></li>
+                    <li><span class="cmd-prefix">[4]</span> <a href="#"
+                            onclick="showSection('projects', event)">/PROJECTS_DIR/</a></li>
+                    <li><span class="cmd-prefix">[5]</span> <a href="#"
+                            onclick="showSection('contact', event)">/CONTACT_INFO.MSG</a></li>
+                </ul>
+            </nav>
+            <p class="hint">Type number or click link so execute...</p>
+        </div>
+
+        <div id="content-display" class="content-display"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
